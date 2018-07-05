@@ -20,6 +20,7 @@ client.on('message', (msg) => {
         require('./cmd/' + args[0]).run(msg, args);
     } catch (err) {
         console.log(err);
+        msg.channel.send('\`*lol <image>\`\n\`*ava [@user]\`\n\`*meme\`')
     }
 });
 
