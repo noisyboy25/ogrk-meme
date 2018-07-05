@@ -8,6 +8,7 @@ const prefix = '*';
 
 client.on('ready', () => {
     console.log('ready');
+    client.user.setActivity('prefix: *');
 });
 
 client.on('message', (msg) => {
