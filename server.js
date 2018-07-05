@@ -3,7 +3,8 @@ const client = new Discord.Client();
 const fs = require('fs');
 
 const prefix = '*';
-const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+//const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+
 
 client.on('ready', () => {
     console.log('ready');
@@ -18,4 +19,4 @@ client.on('message', (msg) => {
     require('./cmd/'+args[0]).run(msg, args);
 });
 
-client.login(config.token);
+client.login(process.env.token);
