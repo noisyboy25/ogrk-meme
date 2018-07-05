@@ -16,7 +16,9 @@ client.on('message', (msg) => {
     args = msg.content.slice(1).split(' ');
     console.log(args);
 
-    require('./cmd/'+args[0]).run(msg, args);
+    try {
+        require('./cmd/' + args[0]).run(msg, args);
+    } catch { console.log('No command') }
 });
 
 client.login(process.env.token);
