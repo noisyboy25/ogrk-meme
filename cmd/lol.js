@@ -6,7 +6,7 @@ exports.run = (msg, args) => {
         const list = ['cry', 'dog', 'kojima', 'pain'];
 
         list.forEach((i) => {
-            text += i + '\n';
+            text += `\`${i}\`\n`;
         });
 
         if (err) msg.channel.send(text);
