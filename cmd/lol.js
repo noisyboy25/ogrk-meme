@@ -3,7 +3,7 @@ const fs = require('fs');
 exports.run = (msg, args) => {
     fs.readFile('./img/' + args[1] + '.png', (err, data) => {
         let text = '';
-        const list = ['cry', 'dog', 'kojima', 'pain'];
+        const list = ['cry', 'dog', 'kojima', 'pain', 'mork', 'swag'];
 
         list.forEach((i) => {
             text += `\`${i}\`\n`;
